@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>POD Studio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<%- include('./template/header') -%>
+		<style>
+
+			.first_carousel_background{
+				background-image: url(../images/mainPix.jpg); 
+				background-size: cover;
+				height: 100vh; 
+				position: relative;
+			}
+
+			/* .seconed_carousel_background{
+				background-image: url(../images/img_bg_2.jpg); 
+				background-size: cover;
+				height: 100vh; 
+				position: relative;
+			}
+
+			.third_carousel_background{
+				background-image: url(../images/img_bg_3.jpg);
+				background-size: cover;
+				height: 100vh; 
+				position: relative;
+			} */
+
+			div.first_logo{
+				position: absolute;
+				width: 500px !important;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				animation-name: first_animation;
+  				animation-duration: 4s;
+			}
+/* 
+			div.seconed_logo{
+				position: absolute;
+				width: 500px !important;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				animation-name: seconed_animation;
+				animation-delay: 4.1s;
+  				animation-duration: 4s;
+			}
+
+			div.third_logo{
+				position: absolute;
+				width: 500px !important;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				animation-name: third_animation;
+				animation-timing-function: 5;
+				animation-delay: 10s;
+  				animation-duration: 4s;
+			} */
+
+			@keyframes first_animation {
+				0%   {left:50%; top: 100%;}
+				100% {left:50%; top: 50%;}
+			}
+
+			/* @keyframes seconed_animation {
+				0%   {left:0%;}
+				100% {left:50%;}
+			}
+
+			@keyframes third_animation {
+				0%   {left:0%;}
+				100% {left:50%;}
+			} */
+
+			@media screen and (max-width: 768px) {
+				div.first_logo{
+					width: 400px !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+	<div id="colorlib-page">
+
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+
+	  	<%- include('./template/navbar') -%>
+
+		<div id="colorlib-main">
+      	<!-- carousel head -->
+		<aside id="colorlib-hero" class="js-fullheight">
+			<div class="flexslider js-fullheight">
+				<ul class="slides">
+
+					<li class="first_carousel_background">
+						<div class="first_logo">
+							<img src="/images/Artboard 2.png" alt="">
+						</div>
+						<div class="overlay"></div>
+					</li>
+
+					<!-- <li class="seconed_carousel_background">
+						<div class="seconed_logo">
+							<img src="/images/Artboard 2.png" alt="">
+						</div>
+						<div class="overlay"></div>
+					</li> -->
+
+					<!-- <li class="third_carousel_background">
+						<div class="third_logo">
+							<img src="/images/Artboard 2.png" alt="">
+						</div>
+						<div class="overlay"></div>
+					</li> -->
+
+				</ul>
+			</div>
+		</aside>
+      	<!-- carousel head -->
+
+			<div class="colorlib-about">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="about-img animate-box" data-animate-effect="fadeInLeft" style="background-image: url(../images/WhatsApp\ Image\ 2021-11-24\ at\ 2.42.57\ PM\ \(8\).jpeg);">
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="about-desc">
+								<span class="heading-meta">Welcome</span>
+								<h2 class="colorlib-heading">Who we are</h2>
+								<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+							</div>
+							<div class="row padding">
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps active">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>We are <br>pasionate</h3>
+									</a>
+								</div>
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>Honest <br>Dependable</h3>
+									</a>
+								</div>
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>Always <br>Improving</h3>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="colorlib-services">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">What I do?</span>
+							<h2 class="colorlib-heading">Here are some of my expertise</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-worker"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>Pod INTERIORS </h3>
+											<p>Pod Interiors focuses on the art and science of enhancing the interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using the space. Services include Home/House design, Office/work space, Bars/Restaurants and custom designs.</p>
+										</div>
+									</div>
+
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-sketch"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>POD VR/VT</h3>
+											<p>Our Virtual Reality solutions help organisations generate a digital world, allowing users to virtually experience their products and services. Whether it is showcasing products to customers or offer remote training to employees, we have a solution for you. </p>
+										</div>
+									</div>
+
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-engineering"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>POD ART</h3>
+											<p>We are an online fine art gallery that is passionate about pop-ups!  Based in Birmingham, we seek out the best in new and established contemporary artists from across the UK and have a growing reputation for our innovative and high quality range of events and exhibitions throughout the year. </p>
+										</div>
+									</div>
+
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-crane"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>POD EVENTS</h3>
+											<p>Pod events is an integrated event production agency delivering compelling live events,offering creative, technical & management in Birmingham and the UK. </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-6">
+									<a href="services.html" class="services-wrap animate-box" data-animate-effect="fadeInRight">
+										<div class="services-img" style="background-image: url(../images/services-1.jpg)"></div>
+										<div class="desc">
+											<h3>Design &amp; Build</h3>
+										</div>
+									</a>
+									<a href="services.html" class="services-wrap animate-box" data-animate-effect="fadeInRight">
+										<div class="services-img" style="background-image: url(../images/services-2.jpg)"></div>
+										<div class="desc">
+											<h3>House Remodeling</h3>
+										</div>
+									</a>
+									<a href="services.html" class="services-wrap animate-box" data-animate-effect="fadeInRight">
+										<div class="services-img" style="background-image: url(../images/services-3.jpg)"></div>
+										<div class="desc">
+											<h3>Construction Management</h3>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-6 move-bottom">
+									<a href="services.html" class="services-wrap animate-box" data-animate-effect="fadeInRight">
+										<div class="services-img" style="background-image: url(../images/services-4.jpg)"></div>
+										<div class="desc">
+											<h3>Painting &amp; Tiling</h3>
+										</div>
+									</a>
+									<a href="services.html" class="services-wrap animate-box" data-animate-effect="fadeInRight">
+										<div class="services-img" style="background-image: url(../images/services-5.jpg)"></div>
+										<div class="desc">
+											<h3>Kitchen Remodeling</h3>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="colorlib-work">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">My Work</span>
+							<h2 class="colorlib-heading animate-box">Recent Work</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(../images/img-1.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 01</a></h3>
+										<span>Building</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(../images/img-2.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 02</a></h3>
+										<span>House, Apartment</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(../images/img-3.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 03</a></h3>
+										<span>Dining Room</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(../images/img-4.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 04</a></h3>
+										<span>House, Building</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(../images/img-5.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 05</a></h3>
+										<span>Condo, Pad</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(../images/img-6.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 06</a></h3>
+										<span>Table, Chairs</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="colorlib-blog">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Read</span>
+							<h2 class="colorlib-heading">Recent Blog</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="blog.html" class="blog-img"><img src="../images/blog-1.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<div class="desc">
+									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+									<h3><a href="blog.html">Renovating National Gallery</a></h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="blog.html" class="blog-img"><img src="../images/blog-2.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<div class="desc">
+									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+									<h3><a href="blog.html">Wordpress for a Beginner</a></h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="blog.html" class="blog-img"><img src="../images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<div class="desc">
+									<span><small>April 14, 2018 </small> | <small> Inspiration </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+									<h3><a href="blog.html">Make website from scratch</a></h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<%- include('./template/get_in_touch') -%>
+		</div>
+	</div>
+
+	</body>
+  <%- include('./template/scripts') -%>
+
+</html>
+

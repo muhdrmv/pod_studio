@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>POD Studio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<%- include('./template/header') -%>
+
+	</head>
+	<body>
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <%- include('./template/navbar') -%>
+
+		<div id="colorlib-main">
+
+			<div class="colorlib-contact">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Read</span>
+							<h2 class="colorlib-heading">Get in Touch</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-globe-outline"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a href="#">info@domain.com</a></p>
+								</div>
+							</div>
+
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-map"></i>
+								</div>
+								<div class="colorlib-text">
+									<p>198 West 21th Street, Suite 721 New York NY 10016</p>
+								</div>
+							</div>
+
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-phone"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a href="tel://">+123 456 7890</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 col-md-push-1">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
+									<form action="" id="contact_us_form">
+										<div class="form-group">
+											<input name="fullname" type="text" class="form-control" placeholder="Fullname" required>
+										</div>
+										<div class="form-group">
+											<input name="email" type="email" class="form-control" placeholder="Email" required>
+										</div>
+										<div class="form-group">
+											<input name="subject" type="text" class="form-control" placeholder="Subject" required>
+										</div>
+										<div class="form-group">
+											<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+										</div>
+										<div class="form-group">
+											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+										</div>
+										<div id="errors"></div>
+									</form>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div id="map"></div>	 -->
+
+		</div>
+	</div>
+
+	<%- include('./template/scripts') -%>
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        document.querySelector("#contact_us_form").addEventListener('submit', function(e) {
+
+            e.preventDefault();
+            let fullname = document.querySelector('input[name="fullname"]').value;
+            let email = document.querySelector('input[name="email"]').value;
+            let subject = document.querySelector('input[name="subject"]').value;
+            let message = document.querySelector('textarea[name="message"]').value;
+            
+            axios.post('/contact',{
+                email : email,
+                subject : subject,
+                fullname : fullname,
+                message: message
+            })
+            .then((response)=>{
+                if( response.data.result ){
+					alert('message sent') 
+					window.location.href = '/contact';
+					
+                }else{
+                    $('#errors').html('')
+                    response.data.msg.forEach( err => {
+                        $('#errors').append(`<p style="font-size: medium">${err}</p>`)
+                    }); 
+                }
+            })
+            .catch((error)=>{
+                alert("There is a problem. before backend.")
+            })
+        })    
+    </script>
+
+	</body>
+</html>
+
